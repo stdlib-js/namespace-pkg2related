@@ -57,7 +57,7 @@ var pkg2related = require( '@stdlib/namespace-pkg2related' );
 Returns package names related to a specified package name.
 
 ```javascript
-var out = pkg2related( '@stdlib/math/base/special/sin' );
+var out = pkg2related( '@stdlib/math-base-special-sin' );
 // returns [...]
 ```
 
@@ -170,7 +170,7 @@ Options:
 ### Examples
 
 ```bash
-$ stdlib-pkg2related '@stdlib/math/base/special/sin'
+$ stdlib-pkg2related '@stdlib/math-base-special-sin'
 ```
 
 </section>

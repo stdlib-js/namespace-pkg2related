@@ -25,7 +25,7 @@
 * @returns related package names
 *
 * @example
-* var out = pkg2related( '@stdlib/math/base/special/sin' );
+* var out = pkg2related( '@stdlib/math-base-special-sin' );
 * // returns [...]
 */
 declare function pkg2related( pkg: string ): Array<string> | null;
