@@ -63,7 +63,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.pkg2related;
+})();
 })();
 </script>
 ```
@@ -125,6 +127,7 @@ var out = pkg2related( 'unrecognized_pkg_beep_boop_bop_bip' );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/namespace-pkg2related@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var list;
 var len;
@@ -143,6 +146,7 @@ for ( i = 0; i < 100; i++ ) {
     console.log( 'alias: %s. related: %s.', v, pkg2related( pkg ).join( ', ' ) );
 }
 
+})();
 })();
 </script>
 </body>
@@ -259,11 +263,11 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/namespace/alias2related]: https://github.com/stdlib-js/namespace-alias2related/tree/umd
+[@stdlib/namespace/alias2related]: https://github.com/stdlib-js/namespace-alias2related/tree/umd/tree/umd
 
-[@stdlib/namespace/aliases]: https://github.com/stdlib-js/namespace-aliases/tree/umd
+[@stdlib/namespace/aliases]: https://github.com/stdlib-js/namespace-aliases/tree/umd/tree/umd
 
-[@stdlib/namespace/pkg2alias]: https://github.com/stdlib-js/namespace-pkg2alias/tree/umd
+[@stdlib/namespace/pkg2alias]: https://github.com/stdlib-js/namespace-pkg2alias/tree/umd/tree/umd
 
 <!-- </related-links> -->
 
