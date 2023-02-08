@@ -34,38 +34,31 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/namespace-pkg2related
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-pkg2related = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/namespace-pkg2related@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var pkg2related = require( 'path/to/vendor/umd/namespace-pkg2related/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/namespace-pkg2related@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.pkg2related;
-})();
-</script>
+var pkg2related = require( '@stdlib/namespace-pkg2related' );
 ```
 
 #### pkg2related( pkg )
@@ -115,16 +108,11 @@ var out = pkg2related( 'unrecognized_pkg_beep_boop_bop_bip' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/namespace-aliases@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/namespace-alias2pkg@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/namespace-pkg2related@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var aliases = require( '@stdlib/namespace-aliases' );
+var alias2pkg = require( '@stdlib/namespace-alias2pkg' );
+var pkg2related = require( '@stdlib/namespace-pkg2related' );
 
 var list;
 var len;
@@ -142,11 +130,6 @@ for ( i = 0; i < 100; i++ ) {
     pkg = alias2pkg( v );
     console.log( 'alias: %s. related: %s.', v, pkg2related( pkg ).join( ', ' ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -155,7 +138,68 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- Section for describing a command-line interface. -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/namespace-pkg2related-cli
+```
+
+</section>
+<!-- CLI usage documentation. -->
+
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: stdlib-pkg2related [options] namespace-pkg2related
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ stdlib-pkg2related '@stdlib/math-base-special-sin'
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -181,9 +225,9 @@ The data files (databases) are licensed under an [Open Data Commons Public Domai
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/namespace/alias2related`][@stdlib/namespace/alias2related]</span><span class="delimiter">: </span><span class="description">return aliases related to a specified alias.</span>
--   <span class="package-name">[`@stdlib/namespace/aliases`][@stdlib/namespace/aliases]</span><span class="delimiter">: </span><span class="description">standard library aliases.</span>
--   <span class="package-name">[`@stdlib/namespace/pkg2alias`][@stdlib/namespace/pkg2alias]</span><span class="delimiter">: </span><span class="description">return the alias associated with a specified package name.</span>
+-   <span class="package-name">[`@stdlib/namespace-alias2related`][@stdlib/namespace/alias2related]</span><span class="delimiter">: </span><span class="description">return aliases related to a specified alias.</span>
+-   <span class="package-name">[`@stdlib/namespace-aliases`][@stdlib/namespace/aliases]</span><span class="delimiter">: </span><span class="description">standard library aliases.</span>
+-   <span class="package-name">[`@stdlib/namespace-pkg2alias`][@stdlib/namespace/pkg2alias]</span><span class="delimiter">: </span><span class="description">return the alias associated with a specified package name.</span>
 
 </section>
 
@@ -243,6 +287,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
+[cli-section]: https://github.com/stdlib-js/namespace-pkg2related#cli
+[cli-url]: https://github.com/stdlib-js/namespace-pkg2related/tree/cli
+[@stdlib/namespace-pkg2related]: https://github.com/stdlib-js/namespace-pkg2related/tree/main
+
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
@@ -259,11 +307,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/namespace/alias2related]: https://github.com/stdlib-js/namespace-alias2related/tree/umd
+[@stdlib/namespace/alias2related]: https://github.com/stdlib-js/namespace-alias2related
 
-[@stdlib/namespace/aliases]: https://github.com/stdlib-js/namespace-aliases/tree/umd
+[@stdlib/namespace/aliases]: https://github.com/stdlib-js/namespace-aliases
 
-[@stdlib/namespace/pkg2alias]: https://github.com/stdlib-js/namespace-pkg2alias/tree/umd
+[@stdlib/namespace/pkg2alias]: https://github.com/stdlib-js/namespace-pkg2alias
 
 <!-- </related-links> -->
 
