@@ -45,14 +45,33 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/namespace-pkg2related
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import pkg2related from 'https://cdn.jsdelivr.net/gh/stdlib-js/namespace-pkg2related@esm/index.mjs';
+var pkg2related = require( '@stdlib/namespace-pkg2related' );
 ```
 
 #### pkg2related( pkg )
@@ -102,16 +121,11 @@ var out = pkg2related( 'unrecognized_pkg_beep_boop_bop_bip' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import aliases from 'https://cdn.jsdelivr.net/gh/stdlib-js/namespace-aliases@esm/index.mjs';
-import alias2pkg from 'https://cdn.jsdelivr.net/gh/stdlib-js/namespace-alias2pkg@esm/index.mjs';
-import pkg2related from 'https://cdn.jsdelivr.net/gh/stdlib-js/namespace-pkg2related@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var aliases = require( '@stdlib/namespace-aliases' );
+var alias2pkg = require( '@stdlib/namespace-alias2pkg' );
+var pkg2related = require( '@stdlib/namespace-pkg2related' );
 
 var list;
 var len;
@@ -129,10 +143,6 @@ for ( i = 0; i < 100; i++ ) {
     pkg = alias2pkg( v );
     console.log( 'alias: %s. related: %s.', v, pkg2related( pkg ).join( ', ' ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -141,7 +151,68 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- Section for describing a command-line interface. -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/namespace-pkg2related-cli
+```
+
+</section>
+<!-- CLI usage documentation. -->
+
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: stdlib-pkg2related [options] namespace-pkg2related
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ stdlib-pkg2related '@stdlib/math-base-special-sin'
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -184,7 +255,7 @@ The data files (databases) are licensed under an [Open Data Commons Public Domai
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -196,7 +267,7 @@ For more information on the project, filing bug reports and feature requests, an
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -252,11 +323,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/namespace/alias2related]: https://github.com/stdlib-js/namespace-alias2related/tree/esm
+[@stdlib/namespace/alias2related]: https://github.com/stdlib-js/namespace-alias2related
 
-[@stdlib/namespace/aliases]: https://github.com/stdlib-js/namespace-aliases/tree/esm
+[@stdlib/namespace/aliases]: https://github.com/stdlib-js/namespace-aliases
 
-[@stdlib/namespace/pkg2alias]: https://github.com/stdlib-js/namespace-pkg2alias/tree/esm
+[@stdlib/namespace/pkg2alias]: https://github.com/stdlib-js/namespace-pkg2alias
 
 <!-- </related-links> -->
 
