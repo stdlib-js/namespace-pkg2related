@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-28)
+## Unreleased (2026-07-04)
 
 <section class="features">
 
@@ -31,6 +31,7 @@
 
 <details>
 
+-   [`d2cee19`](https://github.com/stdlib-js/stdlib/commit/d2cee190b1626e142a25f8719232dd18220c5ce4) - **test:** update test values [(#13260)](https://github.com/stdlib-js/stdlib/pull/13260) _(by Philipp Burckhardt)_
 -   [`313ecef`](https://github.com/stdlib-js/stdlib/commit/313ecef83a5956ac3fd12b24a68085b56747740d) - **feat:** update namespace _(by Athan Reines)_
 -   [`aed59d8`](https://github.com/stdlib-js/stdlib/commit/aed59d8fb4f75747d24fef73037981716ca2da19) - **refactor:** update paths _(by Neeraj Pathak)_
 -   [`aae2976`](https://github.com/stdlib-js/stdlib/commit/aae2976d68e8b9177bf4f3c8123b0576c583ee8e) - **refactor:** update paths _(by Neeraj Pathak)_
@@ -59,10 +60,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Neeraj Pathak
+-   Philipp Burckhardt
 
 </section>
 
