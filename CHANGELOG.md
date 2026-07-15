@@ -31,6 +31,7 @@
 
 <details>
 
+-   [`981720b`](https://github.com/stdlib-js/stdlib/commit/981720b14da698964856967c883c1db26b9f703a) - **refactor:** update paths _(by Neeraj Pathak)_
 -   [`d2cee19`](https://github.com/stdlib-js/stdlib/commit/d2cee190b1626e142a25f8719232dd18220c5ce4) - **test:** update test values [(#13260)](https://github.com/stdlib-js/stdlib/pull/13260) _(by Philipp Burckhardt)_
 -   [`313ecef`](https://github.com/stdlib-js/stdlib/commit/313ecef83a5956ac3fd12b24a68085b56747740d) - **feat:** update namespace _(by Athan Reines)_
 -   [`aed59d8`](https://github.com/stdlib-js/stdlib/commit/aed59d8fb4f75747d24fef73037981716ca2da19) - **refactor:** update paths _(by Neeraj Pathak)_
